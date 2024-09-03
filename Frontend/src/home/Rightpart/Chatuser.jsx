@@ -10,7 +10,7 @@ function Chatuser() {
     return onlineUsers.includes(userId) ? "Online" : "Offline";
   };
 
-  // console.log(selectedConversation.fullname);
+  //console.log("the right isde name is ", selectedConversation.fullname);
   return (
     <div className="relative flex items-center h-[8%] justify-center gap-4 bg-slate-800 hover:bg-slate-700 duration-300 rounded-md">
       <label
@@ -21,8 +21,13 @@ function Chatuser() {
       </label>
       <div className="flex space-x-3 items-center justify-center h-[8vh] bg-gray-800 hover:bg-gray-700 duration-300">
         <div className="avatar online">
-          <div className="w-16 rounded-full">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <div className="w-10 rounded-full">
+            {/* <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" /> */}
+
+            <img
+              src={`https://api.dicebear.com/5.x/initials/svg?seed=${selectedConversation.fullname}`}
+              alt="Profile Avatar"
+            />
           </div>
         </div>
         <div>

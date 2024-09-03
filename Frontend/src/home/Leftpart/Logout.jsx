@@ -23,12 +23,31 @@ function Logout() {
   return (
     <>
       <hr />
-      <div className=" h-[10vh] bg-transparent">
+      {/* <div className=" h-[9vh] bg-transparent ">
         <div>
           <BiLogOutCircle
-            className="text-5xl text-white hover:bg-slate-700 duration-300 cursor-pointer rounded-full p-2 ml-2 mt-1"
+            className="text-5xl text-white hover:bg-slate-700 duration-300 cursor-pointer rounded-full  ml-2 mt-7"
             onClick={handleLogout}
           />
+          {/* <h1 className="px-8 py-2 text-white font-semibold bg-slate-800 rounded-md">
+            Log Out
+          </h1> */}
+      {/* </div>
+      </div> */}
+
+      <div className=" h-[10vh]">
+        <div className="px-6 py-4">
+          <div className="flex space-x-3">
+            <BiLogOutCircle
+              className="text-5xl text-white hover:bg-slate-700 duration-300 cursor-pointer rounded-full  ml-2 mt-7"
+              onClick={handleLogout}
+            />
+            <button>
+              <div className="text-3xl p-8 hover:bg-gray-600 rounded-full duration-300">
+                LOGOUT{" "}
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </>
